@@ -1,0 +1,522 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Flowchart" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.IMAP.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.PDF.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Numerics</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart DisplayName="Flowchart" sap:VirtualizedContainerService.HintSize="1172.8,563.2" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="mailMessages">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">GetIMAPMailMessages_2</x:String>
+            <x:String x:Key="SourcePropertyName">Messages</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+    </Flowchart.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <av:Size x:Key="ShapeSize">49.6,49.6</av:Size>
+        <av:Point x:Key="ShapeLocation">555,35</av:Point>
+        <av:PointCollection x:Key="ConnectorLocation">579.8,84.6 579.8,114.6 580.2,114.6 580.2,125</av:PointCollection>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID1</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">525,125</av:Point>
+          <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">580.2,195.4 580.2,255</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Email" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="hamzabinnkashif@gmail.com" EnableSSL="True" FilterExpression="[&quot;SUBJECT &quot;&quot;Invoice&quot;&quot;&quot;]" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_2" IgnoreCRL="False" MailFolder="Inbox" MarkAsRead="False" Messages="[mailMessages]" OnlyUnreadMessages="False" OrderByDate="NewestFirst" Password="krpl ajsm mhvr wmgb" Port="993" SecureConnection="Auto" Server="imap.gmail.com" Top="30" />
+        <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each currentMailMessage" sap:VirtualizedContainerService.HintSize="449.6,320" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[mailMessages]">
+          <ui:ForEach.Body>
+            <ActivityAction x:TypeArguments="snm:MailMessage">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="currentMailMessage" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,173.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="382.4,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[currentMailMessage.Subject]" />
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEach.Body>
+        </ui:ForEach>
+        <ui:ForEachFileX DisplayName="For Each File in Folder" Filter="*.pdf" Folder="D:\SybrosTech\RPA Capstone\Capstone\Pdfs" sap:VirtualizedContainerService.HintSize="449.6,459.2" sap2010:WorkflowViewState.IdRef="ForEachFileX_3" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+          <ui:ForEachFileX.Body>
+            <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+              <ActivityAction.Argument1>
+                <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+              </ActivityAction.Argument1>
+              <ActivityAction.Argument2>
+                <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+              </ActivityAction.Argument2>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,164" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="382.4,104" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[CurrentFile.FullName]" />
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEachFileX.Body>
+        </ui:ForEachFileX>
+        <ui:SaveMailAttachments Attachments="{x:Null}" DisplayName="Save Attachments" ExcludeInlineAttachments="False" FolderPath="D:\SybrosTech\RPA Capstone\Capstone\Pdfs" sap:VirtualizedContainerService.HintSize="449.6,112.8" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_1" Message="[mailMessages(0)]" OverwriteExisting="False" />
+      </Sequence>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">525,255</av:Point>
+              <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="PDF Input" sap:VirtualizedContainerService.HintSize="579.2,3554.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="DT_Capstone" />
+              <Variable x:TypeArguments="x:String" Name="ProjectPath" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEachFileX DisplayName="For Each File in Folder" Filter="*.pdf" Folder="D:\SybrosTech\RPA Capstone\Capstone\Pdfs" sap:VirtualizedContainerService.HintSize="545.6,3154.4" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+              <ui:ForEachFileX.Body>
+                <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+                  <ActivityAction.Argument1>
+                    <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+                  </ActivityAction.Argument1>
+                  <ActivityAction.Argument2>
+                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                  </ActivityAction.Argument2>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,2859.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="RawOutpu" />
+                      <Variable x:TypeArguments="x:String" Name="Name" />
+                      <Variable x:TypeArguments="x:String" Name="ComAddress" />
+                      <Variable x:TypeArguments="x:String" Name="ComCity" />
+                      <Variable x:TypeArguments="x:String" Name="ComState" />
+                      <Variable x:TypeArguments="x:String" Name="ComPincode" />
+                      <Variable x:TypeArguments="x:String" Name="ComContact" />
+                      <Variable x:TypeArguments="x:String" Name="ComTin" />
+                      <Variable x:TypeArguments="x:String" Name="CustNum" />
+                      <Variable x:TypeArguments="x:String" Name="CustName" />
+                      <Variable x:TypeArguments="x:String" Name="CustAddr" />
+                      <Variable x:TypeArguments="x:String" Name="CustCity" />
+                      <Variable x:TypeArguments="x:String" Name="CustState" />
+                      <Variable x:TypeArguments="x:String" Name="CustPin" />
+                      <Variable x:TypeArguments="x:String" Name="CustTin" />
+                      <Variable x:TypeArguments="x:String" Name="InvoiceNo" />
+                      <Variable x:TypeArguments="x:String" Name="InvoiceDate" />
+                      <Variable x:TypeArguments="str:MatchCollection" Name="ItemNo" />
+                      <Variable x:TypeArguments="str:MatchCollection" Name="Description" />
+                      <Variable x:TypeArguments="str:MatchCollection" Name="Quantity" />
+                      <Variable x:TypeArguments="str:MatchCollection" Name="Price" />
+                      <Variable x:TypeArguments="x:String" Name="SubTotal" />
+                      <Variable x:TypeArguments="x:String" Name="GST" />
+                      <Variable x:TypeArguments="x:String" Name="Total" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="Read PDF Text" FileName="[CurrentFile.FullName]" sap:VirtualizedContainerService.HintSize="478.4,115.2" sap2010:WorkflowViewState.IdRef="ReadPDFText_4" Range="All" Text="[RawOutpu]" />
+                    <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="Hamza.txt" sap:VirtualizedContainerService.HintSize="478.4,166.4" sap2010:WorkflowViewState.IdRef="WriteTextFile_3" Text="[RawOutpu]" />
+                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,836" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                      <ui:MultipleAssign.AssignOperations>
+                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="32">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[Name]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(RawOutpu.ToString,"^(.)+\n(.)+").ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[ComAddress]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(RawOutpu.ToString,"2481 Felosa Drive").ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[ComCity]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(RawOutpu.ToString,"(.+)(?=, Texas)").ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[ComState]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(RawOutpu.ToString,"(?&lt;=Llano, )(.)+").ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[ComPincode]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(RawOutpu.ToString,"(?&lt;=Pin Code )(.)+").ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[ComContact]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(RawOutpu.ToString,"\+\d+").ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[ComTin]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(RawOutpu.ToString,"(?&lt;=TIN: )\d+").ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[CustName]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(RawOutpu.ToString,"(.)+ (..) (.)+").ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[CustAddr]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Matches(RawOutpu.ToString,"\d+ (.)+ (.)+")(1).ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[CustCity]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(RawOutpu.ToString,"(.)+(?=, Florida)").ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[CustState]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(RawOutpu.ToString,"(?&lt;=\w+, )(.)+(?= INVOICE)").ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[CustPin]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Matches(RawOutpu.ToString,"(?&lt;=Pin Code )\d+")(1).ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[CustNum]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(RawOutpu.ToString,"(?&lt;=Contact )\d+-\d+-\d+").ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[CustTin]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Matches(RawOutpu.ToString,"(?&lt;=TIN: )\d+")(1).ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[InvoiceNo]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(RawOutpu.ToString,"(?&lt;=Invoice # )\d+").ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[InvoiceDate]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(RawOutpu.ToString,"(?&lt;=Invoice Date: )(\w)+ (\d)+, (\d)+").ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="str:MatchCollection">[ItemNo]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="str:MatchCollection">[System.Text.RegularExpressions.Regex.Matches(RawOutpu.ToString,"\b\d{2}\.")]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="str:MatchCollection">[Description]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="str:MatchCollection">[System.Text.RegularExpressions.Regex.Matches(RawOutpu.ToString,"(?&lt;=\b\d{2}\. ).+(?= \d. \d+. \d.+)")]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="str:MatchCollection">[Quantity]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="str:MatchCollection">[System.Text.RegularExpressions.Regex.Matches(RawOutpu.ToString,"\b\d{1}\.")]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_21">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="str:MatchCollection">[Price]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="str:MatchCollection">[System.Text.RegularExpressions.Regex.Matches(RawOutpu.ToString,"(?&lt;=\b\d{1}\. \b\d{4}\. )\d+")]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_22">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[SubTotal]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(RawOutpu.ToString,"(?&lt;=Sub Total )\d+\.\d+").ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_23">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[GST]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(RawOutpu.ToString,"(?&lt;=GST 8% )\d+\.\d+").ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_24">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[Total]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Matches(RawOutpu.ToString,"(?&lt;=Total )\d+\.\d+")(1).ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                        </scg:List>
+                      </ui:MultipleAssign.AssignOperations>
+                    </ui:MultipleAssign>
+                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Invoice Entry" sap:VirtualizedContainerService.HintSize="478.4,1681.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="ec870bf9-a4df-4801-b707-aafff57e4327" Version="V2">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1367.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Delay Duration="00:00:00.5000000" sap:VirtualizedContainerService.HintSize="382.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="ec870bf9-a4df-4801-b707-aafff57e4327" Text="[Name + &quot;[k(Tab)]&quot; + &#xD;&#xA;ComAddress + &quot;[k(Tab)]&quot; + &#xD;&#xA;ComCity + &quot;[k(Tab)]&quot; + &#xD;&#xA;ComState + &quot;[k(Tab)]&quot; + &#xD;&#xA;ComPincode + &quot;[k(Tab)]&quot; + &#xD;&#xA;ComContact + &quot;[k(Tab)]&quot; + &#xD;&#xA;ComTin + &quot;[k(Tab)]&quot;+ &#xD;&#xA;CustName + &quot;[k(Tab)]&quot; + &#xD;&#xA;CustAddr + &quot;[k(Tab)]&quot; + &#xD;&#xA;CustCity + &quot;[k(Tab)]&quot; + &#xD;&#xA;CustState + &quot;[k(Tab)]&quot; + &#xD;&#xA;CustPin + &quot;[k(Tab)]&quot; + &#xD;&#xA;CustNum + &quot;[k(Tab)]&quot; + &#xD;&#xA;CustTin + &quot;[k(Tab)]&quot; +&#xD;&#xA;InvoiceNo + &quot;[k(Tab)]&quot; + &#xD;&#xA;InvoiceDate + &quot;[k(Tab)]&quot; +&#xD;&#xA;ItemNo(0).ToString + &quot;[k(Tab)]&quot; +&#xD;&#xA;Description(0).ToString + &quot;[k(Tab)]&quot; +&#xD;&#xA;Quantity(0).ToString + &quot;[k(Tab)]&quot; + &#xD;&#xA;Price(0).ToString + &quot;[k(Tab)]&quot; +&#xD;&#xA;ItemNo(1).ToString + &quot;[k(Tab)]&quot; +&#xD;&#xA;Description(1).ToString + &quot;[k(Tab)]&quot; +&#xD;&#xA;Quantity(1).ToString + &quot;[k(Tab)]&quot; + &#xD;&#xA;Price(1).ToString + &quot;[k(Tab)]&quot; +&#xD;&#xA;ItemNo(2).ToString + &quot;[k(Tab)]&quot; +&#xD;&#xA;Description(2).ToString + &quot;[k(Tab)]&quot; +&#xD;&#xA;Quantity(2).ToString + &quot;[k(Tab)]&quot; + &#xD;&#xA;Price(2).ToString + &quot;[k(Tab)]&quot; +&#xD;&#xA;ItemNo(3).ToString + &quot;[k(Tab)]&quot; +&#xD;&#xA;Description(3).ToString + &quot;[k(Tab)]&quot; +&#xD;&#xA;Quantity(3).ToString + &quot;[k(Tab)]&quot; + &#xD;&#xA;Price(3).ToString]" Version="V4">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable CVScreenId="084da220-05c9-4786-90dd-17ca38a7c509" DesignTimeRectangle="203, 147, 148, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlname='groupBox1' /&gt;&lt;wnd ctrlname='textBox1' /&gt;" Guid="e9c4b810-4c92-4c8e-be28-1d7997d39d83" InformativeScreenshot="ef4f4e49cfb0fa4692d4df4b866218fb.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='order entry.exe' ctrlname='Form1' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target CVScreenId="084da220-05c9-4786-90dd-17ca38a7c509" CvTextArea="155, 156, 35, 15" CvTextArgument="Name" CvType="Text" DesignTimeRectangle="152, 156, 44, 16" ElementType="Text" FullSelectorArgument="&lt;wnd ctrlname='groupBox1' /&gt;&lt;wnd ctrlname='label1' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='groupBox1' /&gt;&lt;wnd ctrlname='label1' check:text='Name' /&gt;" Guid="4513feea-3141-41c2-bede-2813e425b686" SearchSteps="Selector, FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'SubTotal'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="ec870bf9-a4df-4801-b707-aafff57e4327" Text="[SubTotal + &quot;[k(Tab)]&quot; +&#xD;&#xA;GST + &quot;[k(Tab)]&quot; +&#xD;&#xA;Total + &quot;[k(Tab)][k(Tab)]&quot;]" Version="V4">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable CVScreenId="66336173-817c-4ec8-97c1-8ac376b26e86" DesignTimeRectangle="797, 608, 148, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlname='textBox14' /&gt;" Guid="c43a9e78-20d9-46f3-9d54-22abce029367" InformativeScreenshot="c272108f90227c159d87085076fec832.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='order entry.exe' ctrlname='Form1' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target CVScreenId="66336173-817c-4ec8-97c1-8ac376b26e86" CvTextArea="729, 616, 56, 16" CvTextArgument="SubTotal" CvType="Text" DesignTimeRectangle="727, 617, 63, 16" ElementType="Text" FullSelectorArgument="&lt;wnd ctrlname='lblSubtotal' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='lblSubtotal' check:text='SubTotal' /&gt;" Guid="bb15715b-3b06-404e-857b-b0810835f35f" SearchSteps="Selector, FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="382.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ec870bf9-a4df-4801-b707-aafff57e4327" Version="V4">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable CVScreenId="8d3e9013-ed01-4ff4-b11b-bbea3e409312" DesignTimeRectangle="713, 697, 115, 38" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='button2' /&gt;" Guid="d92e46d0-63cb-4a54-b0b7-ecf090d819bb" InformativeScreenshot="3a0e5052a3474340be4c8476604cb72f.png" ScopeSelectorArgument="&lt;wnd app='order entry.exe' ctrlname='Form1' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="382.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ec870bf9-a4df-4801-b707-aafff57e4327" Version="V4">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable CVScreenId="8f94a8d5-3f91-4710-b414-3ac747f09589" DesignTimeRectangle="106, 124, 94, 29" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='2' title='OK' /&gt;" Guid="2d46b0a9-e5d4-4092-a62b-a0720034ed75" InformativeScreenshot="f124d66c1e9c58e4866057a2afb5006c.png" ScopeSelectorArgument="&lt;wnd app='order entry.exe' cls='#32770' title='Message' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <ui:BuildDataTable DataTable="[DT_Capstone]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="382.4,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_No&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Product_x0020_Quantity&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;TimeStamp&quot; msdata:Caption=&quot;&quot; type=&quot;xs:anyType&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CurrentIndex.ToString,&quot;4&quot;,Now.ToString}]" DataTable="[DT_Capstone]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="382.4,212.8" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="98, 98, 1010, 760" FilePath="D:\SybrosTech\RPA Capstone\order entry.exe" IconBase64="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" InformativeScreenshot="26c0e5f69d82dfc5e71f5c8688cf21f6.png" Selector="&lt;wnd app='order entry.exe' ctrlname='Form1' /&gt;" />
+                      </uix:NApplicationCard.TargetApp>
+                    </uix:NApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachFileX.Body>
+            </ui:ForEachFileX>
+            <ui:GetEnvironmentVariable DisplayName="Get Environment Variable" sap:VirtualizedContainerService.HintSize="545.6,112.8" sap2010:WorkflowViewState.IdRef="GetEnvironmentVariable_1" Variable="CurrentDirectory" VariableValue="[ProjectPath]" />
+            <ui:AppendWriteCsvFile PathResource="{x:Null}" AddHeaders="True" CsvAction="Write" DataTable="[DT_Capstone]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Write CSV" FilePath="[Path.Combine(ProjectPath, &quot;Report.csv&quot;)]" sap:VirtualizedContainerService.HintSize="545.6,227.2" sap2010:WorkflowViewState.IdRef="AppendWriteCsvFile_3" ShouldQuote="True" />
+          </Sequence>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID0</x:Reference>
+  </Flowchart>
+</Activity>
